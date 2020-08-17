@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suchengyu.gmall.product.mapper.BaseAttrInfoMapper">
+
+    <select id="selectBaseAttrInfoListBySkuId" resultType="com.suchengyu.gmall.model.list.SearchAttr">
+        SELECT
+            bai.id AS attrId,
+            bai.attr_name AS attrName,
+            bav.value_name AS attrValue
+        FROM
+            base_attr_info AS bai
+                INNER JOIN base_attr_value AS bav ON bai.id = bav.attr_id
+                INNER JOIN sku_attr_value AS sav ON sav.value_id = bav.id
+                AND sav.sku_id = #{skuId}
+    </select>
+</mapper>

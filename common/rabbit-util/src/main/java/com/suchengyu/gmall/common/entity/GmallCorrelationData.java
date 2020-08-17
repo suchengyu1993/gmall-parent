@@ -1,0 +1,30 @@
+package com.suchengyu.gmall.common.entity;
+
+import lombok.Data;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+
+/**
+ * GmallCorrelationData
+ *
+ * @Author: 苏成瑜
+ * @CreateTime: 2020-08-12
+ * @Description:
+ */
+@Data
+public class GmallCorrelationData extends CorrelationData {
+    //消息体
+    private Object message;
+    //交换机
+    private String exchange;
+    //路由键
+    private String routingKey;
+    //重试字数
+    private int retryCount = 0;
+    //是否延迟消息
+    private boolean isDelay = false;
+    //延迟时长
+    private int delayTime = 10 ;
+
+
+
+}
