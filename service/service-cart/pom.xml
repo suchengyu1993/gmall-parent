@@ -9,7 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <version>1.0</version>
     <artifactId>service-cart</artifactId>
+    <packaging>jar</packaging>
+    <name>service-cart</name>
+    <description>service-cart</description>
 
     <dependencies>
         <dependency>
@@ -18,5 +22,15 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
+    <!--打包插件-->
+    <build>
+        <finalName>service-cart</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service-order</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>service-order</name>
+    <description>service-order</description>
+
     <dependencies>
         <dependency>
             <groupId>com.suchengyu.gmall</groupId>
@@ -32,5 +37,16 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
+
+    <!--打包插件-->
+    <build>
+        <finalName>service-order</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

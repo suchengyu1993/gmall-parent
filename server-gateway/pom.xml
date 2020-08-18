@@ -9,7 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <version>1.0</version>
     <artifactId>server-gateway</artifactId>
+    <packaging>jar</packaging>
+    <name>server-gateway</name>
+    <description>server-gateway</description>
 
     <dependencies>
         <dependency>
@@ -38,6 +42,16 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
+    <!--打包插件-->
+    <build>
+        <finalName>server-gateway</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
